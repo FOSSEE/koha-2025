@@ -1,0 +1,14 @@
+name: Scheduled Maintenance
+description: Allows users to schedule and put site into maintenance mode.
+package: Administration
+type: module
+core_version_requirement: ^9 || ^10
+configure: system.site_maintenance_mode
+dependencies:
+  - drupal:datetime
+  - drupal:field
+
+# Information added by Drupal.org packaging script on 2022-08-24
+version: '8.x-2.0'
+project: 'scheduled_maintenance'
+datestamp: 1661302210

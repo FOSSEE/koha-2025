@@ -1,0 +1,9 @@
+services:
+  scheduled_maintenance:
+    class: Drupal\scheduled_maintenance\ScheduledMaintenance
+    arguments: [ '@config.factory', '@current_user' ]
+  scheduled_maintenance.event_subscriber:
+    class: Drupal\scheduled_maintenance\EventSubscriber\ScheduledMaintenanceSubscriber
+    arguments: [ '@state', '@datetime.time', '@scheduled_maintenance' ]
+    tags:
+      - { name: event_subscriber }
