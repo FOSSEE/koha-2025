@@ -1,0 +1,4 @@
+scheduled maintenance:
+  title: 'Scheduled Maintenance'
+  description: 'Scheduled maintenance for the site.'
+  restrict access: true
