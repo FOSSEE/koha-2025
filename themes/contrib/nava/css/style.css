@@ -19,6 +19,12 @@
   --font-weight-bold: 500;
 }
 
+ .flexslider .slides img {
+  margin:auto !important;
+  width: auto !important;
+  display: block;
+} 
+
 /* Default Box sizing */
 *,
 *::before,

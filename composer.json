@@ -41,7 +41,6 @@
         "drupal/menu_per_role": "^1.8",
         "drupal/minifier_html": "^11.0",
         "drupal/module_missing_message_fixer": "^2.0",
-        "drupal/nava": "^1.0",
         "drupal/paragraphs": "^1.15",
         "drupal/recaptcha": "^3.4",
         "drupal/scheduled_maintenance": "^2.0",

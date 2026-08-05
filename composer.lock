@@ -3088,50 +3088,6 @@
             }
         },
         {
-            "name": "drupal/nava",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/nava.git",
-                "reference": "1.0.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/nava-1.0.4.zip",
-                "reference": "1.0.4",
-                "shasum": "5fecb7811efee6b6c3a3bc9aac9165d65003a7d0"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10 || ^11"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.4",
-                    "datestamp": "1741834213",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "ravis",
-                    "homepage": "https://www.drupal.org/user/79351"
-                }
-            ],
-            "description": "<p>nava is a light weight modern Drupal 9, 10, 11 theme by <a href=\"https://dev5.dev/\" target=\"_blank\">Dev5.dev</a></p><p><a href=\"https://nava.dev5.dev/\" target=\"_blank\">Theme Demo</a> | <a href=\"https://dev5.dev/theme/drupal/nava\" target=\"_blank\">Theme Homepage</a> | <a href=\"https://dev5.dev/doc/nava\" target=\"_blank\">User Guide</a></p>",
-            "homepage": "https://www.drupal.org/project/nava",
-            "support": {
-                "source": "https://git.drupalcode.org/project/nava"
-            }
-        },
-        {
             "name": "drupal/paragraphs",
             "version": "1.19.0",
             "source": {
