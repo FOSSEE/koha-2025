@@ -1,0 +1,24 @@
+scheduled_maintenance.settings:
+  type: config_object
+  label: 'Scheduled Maintenance settings'
+  mapping:
+    message:
+      type: string
+      label: 'Maintenance message'
+    offset:
+      type: mapping
+      label: 'Message offset settings'
+      mapping:
+        value:
+          type: string
+          label: 'Offset value'
+        unit:
+          type: string
+          label: 'Offset unit'
+    time:
+      type: string
+      label: 'Maintenance time'
+    auto_start:
+      type: integer
+      label: 'Auto start'
+

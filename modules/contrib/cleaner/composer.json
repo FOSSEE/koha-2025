@@ -1,0 +1,27 @@
+{
+  "name": "drupal/cleaner",
+  "type": "drupal-module",
+  "description": "Allows the admin to set a schedule for clearing caches and other stuff.",
+  "homepage": "http://drupal.org/project/cleaner",
+  "authors": [
+    {
+      "name": "Nancy Wichmann",
+      "homepage": "http://nanwich.com",
+      "role": "Author"
+    },
+    {
+      "name": "Valentine Matsveiko",
+      "homepage": "https://github.com/valentine94",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/cleaner",
+    "source": "http://cgit.drupalcode.org/cleaner"
+  },
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=8.1"
+  }
+}

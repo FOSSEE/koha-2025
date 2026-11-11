@@ -1,0 +1,122 @@
+<?php
+
+/**
+ * @file
+ * Allow users to define a scheduled maintenance.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function scheduled_maintenance_form_system_site_maintenance_mode_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /** @var \Drupal\scheduled_maintenance\ScheduledMaintenance $service */
+  $service = \Drupal::service('scheduled_maintenance');
+  $config = $service->getConfig();
+
+  $form['scheduled_maintenance'] = [
+    '#type' => 'details',
+    '#open' => TRUE,
+    '#title' => t('Scheduled maintenance'),
+    '#access' => $service->hasAccess(),
+  ];
+
+  $date_time = NULL;
+  if (!empty($config->get('time'))) {
+    $date_time = new DrupalDateTime($config->get('time'));
+  }
+  $form['scheduled_maintenance']['time'] = [
+    '#type' => 'datetime',
+    '#title' => t('Maintenance date & time'),
+    '#default_value' => $date_time,
+    '#description' => t('Schedule a maintenance by entering the maintenance start. Format: %time (YYYY-MM-DD hh:mm:ss). Leave blank to disable scheduled maintenance.',
+      ['%time' => \Drupal::service('date.formatter')->format(time(), 'custom', $service->getDefaultDateFormat())]),
+  ];
+
+  $form['scheduled_maintenance']['auto_start'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Automatically turn on maintenance mode'),
+    '#default_value' => $config->get('auto_start'),
+    '#description' => t('Automatically enables maintenance mode at the scheduled maintenance time.'),
+  ];
+
+  $form['scheduled_maintenance']['message'] = [
+    '#type' => 'textfield',
+    '#title' => t('Message'),
+    '#default_value' => $config->get('message'),
+    '#description' => t('Warning message for site visitors about the upcoming maintenance. No HTML tags allowed.'),
+  ];
+
+  $form['scheduled_maintenance']['message_offset'] = [
+    '#type' => 'item',
+    '#title' => t('Show message'),
+    '#description' => t('How long before the scheduled maintenance the warning message should appear. Leave blank to disable message.'),
+  ];
+
+  $form['scheduled_maintenance']['message_offset']['container'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['container-inline'],
+    ],
+  ];
+
+  $form['scheduled_maintenance']['message_offset']['container']['message_offset_value'] = [
+    '#title' => t('Message time'),
+    '#title_display' => 'invisible',
+    '#type' => 'number',
+    '#min' => 0,
+    '#default_value' => $config->get('offset.value'),
+  ];
+
+  $form['scheduled_maintenance']['message_offset']['container']['message_offset_unit'] = [
+    '#type' => 'select',
+    '#options' => $service->getAllowedUnits(),
+    '#default_value' => $config->get('offset.unit'),
+    '#field_suffix' => t('before'),
+  ];
+
+  $form['#submit'][] = 'scheduled_maintenance_form_submit';
+}
+
+/**
+ * Save maintenance configuration.
+ *
+ * @param array $form
+ *   The form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ */
+function scheduled_maintenance_form_submit(array &$form, FormStateInterface $form_state) {
+  /** @var \Drupal\scheduled_maintenance\ScheduledMaintenance $service */
+  $service = \Drupal::service('scheduled_maintenance');
+  $config = $service->getConfig();
+
+  $time = '';
+  if (!empty($form_state->getValue('time')) && $form_state->getValue('time') instanceof DrupalDateTime) {
+    /** @var \Drupal\Core\Datetime\DrupalDateTime $date_time */
+    $date_time = $form_state->getValue('time');
+    $time = $date_time->format($service->getDefaultDateFormat());
+  }
+  $config
+    ->set('time', $time)
+    ->set('auto_start', $form_state->getValue('auto_start'))
+    ->set('message', $form_state->getValue('message'))
+    ->set('offset.value', $form_state->getValue('message_offset_value'))
+    ->set('offset.unit', $form_state->getValue('message_offset_unit'))
+    ->save();
+}
+
+/**
+ * Implements hook_variable_info().
+ */
+function scheduled_maintenance_variable_info($options): array {
+  $variable['scheduled_maintenance_message'] = [
+    'type' => 'string',
+    'title' => t('Scheduled maintenance message', [], $options),
+    'description' => t('Warning message for site visitors about the upcoming maintenance.', [], $options),
+    'group' => 'site_information',
+  ];
+  return $variable;
+}

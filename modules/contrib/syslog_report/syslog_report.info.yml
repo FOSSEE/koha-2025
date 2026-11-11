@@ -1,0 +1,13 @@
+name: 'Syslog report'
+description: 'View the Log and records from syslog.'
+type: module
+configure: syslog_report.admin_config_syslog-report
+dependencies:
+  - syslog
+  - jquery_ui_accordion
+core_version_requirement: ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2023-12-13
+version: '3.0.1'
+project: 'syslog_report'
+datestamp: 1702464165

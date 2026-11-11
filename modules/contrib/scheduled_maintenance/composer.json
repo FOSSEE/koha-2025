@@ -1,0 +1,26 @@
+{
+    "name": "drupal/scheduled_maintenance",
+    "type": "drupal-module",
+    "description": "Allows users to schedule and put site into maintenance mode.",
+    "keywords": [
+        "Drupal",
+        "Maintenance Mode",
+        "Scheduler",
+        "Administration"
+    ],
+    "authors": [
+        {
+            "name": "George Anderson (geoanders)",
+            "homepage": "https://www.drupal.org/u/geoanders",
+            "role": "Maintainer"
+        }
+    ],
+    "license": "GPL-2.0+",
+    "support": {
+        "issues": "https://drupal.org/project/issues/scheduled_maintenance",
+        "source": "https://git.drupalcode.org/project/scheduled_maintenance"
+    },
+    "require": {
+        "drupal/core": "^9 || ^10"
+    }
+}

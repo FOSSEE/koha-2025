@@ -12,55 +12,78 @@
     "require": {
         "php": ">=8.3.0",
         "composer/installers": "^2.0",
+
         "drupal/core-composer-scaffold": "^11.0",
+        "drupal/core-project-message": "^11.0",
         "drupal/core-recommended": "^11.0",
+        "drupal/core-vendor-hardening": "^11.0",
+
         "drupal/classy": "^2.0",
-        "drupal/colorbox": "^2.0",
+        "drupal/colorbox": "^2.1",
         "drupal/flexslider": "^3.0@alpha",
         "drupal/google_tag": "^2.0",
         "drupal/jquery_ui": "^1.7",
         "drupal/libraries": "^4.0",
-        "drupal/matomo": "^1.19",
+        "drupal/matomo": "^1.25",
         "drupal/slick": "^3.0",
         "drupal/slick_views": "^3.0",
-        "drupal/superfish": "^1.8",
+        "drupal/superfish": "^1.13",
         "drupal/views_slideshow": "^5.0",
-        "drush/drush": "^13.0",
-        "mglaman/composer-drupal-lenient": "^2.0",
-        "drupal/module_missing_message_fixer": "^2.0",
+
         "drupal/admin_toolbar": "^3.6",
-        "drupal/captcha": "^2.0",
-        "drupal/recaptcha": "^3.4",
-        "drupal/xmlsitemap": "^2.0",
-        "drupal/statistics": "^1.0",
-        "drupal/forum": "^1.1",
-        "drupal/paragraphs": "^1.23",
-        "drupal/entity_reference_revisions": "^1.14",
-        "drupal/linkchecker": "^2.1",
         "drupal/adminimal_admin_toolbar": "^2.0@dev",
+        "drupal/advagg": "^6.0@alpha",
+        "drupal/captcha": "^2.0",
+        "drupal/ckeditor5_plugin_pack": "^1.5",
+        "drupal/ckeditor5_premium_features": "^1.7",
+        "drupal/cleaner": "^3.0@alpha",
         "drupal/color_field": "^3.0",
+        "drupal/forum": "^1.1",
+        "drupal/git_deploy": "^2.6",
         "drupal/google_analytics": "^4.0",
         "drupal/gtm": "^1.10",
+        "drupal/insert_view": "^3.0",
+        "drupal/linkchecker": "^2.1",
         "drupal/masquerade": "^2.2",
         "drupal/menu_per_role": "^2.0",
+        "drupal/minifier_html": "^11.0",
+        "drupal/module_missing_message_fixer": "^2.0",
+        "drupal/paragraphs": "^1.23",
+        "drupal/recaptcha": "^3.4",
+        "drupal/scheduled_maintenance": "^2.0",
+        "drupal/statistics": "^1.0",
+        "drupal/syslog_report": "^3.0",
+        "drupal/xmlsitemap": "^2.0",
+
+        "drupal/entity_reference_revisions": "^1.14",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.1",
-        "drupal/spambot": "^1.4"
+        "drupal/spambot": "^1.4",
+
+        "drush/drush": "^13.0",
+        "mglaman/composer-drupal-lenient": "^2.0"
     },
     "conflict": {
         "drupal/automatic_updates": "<4",
         "drupal/project_browser": "<2.1",
+        "drupal/drupal": "*",
         "drush/drush": "<12.4.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "preferred-install": "dist",
+        "sort-packages": true,
         "allow-plugins": {
             "symfony/runtime": true,
             "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true,
             "composer/installers": true,
-            "mglaman/composer-drupal-lenient": true
+            "mglaman/composer-drupal-lenient": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true
         }
     },
     "extra": {
@@ -69,8 +92,42 @@
                 "web-root": "./"
             }
         },
+        "installer-paths": {
+            "core": [
+                "type:drupal-core"
+            ],
+            "libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
         "drupal-lenient": {
-            "allowed-packages": ["drupal/advagg", "drupal/views_migration", "drupal/cleaner", "drupal/minifier_html"]
+            "allowed-packages": [
+                "drupal/advagg",
+                "drupal/views_migration",
+                "drupal/cleaner",
+                "drupal/minifier_html"
+            ]
         }
     }
 }

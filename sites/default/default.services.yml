@@ -38,10 +38,13 @@ parameters:
     # To maximize compatibility and normalize the behavior across user agents,
     # the cookie domain should start with a dot.
     #
+<<<<<<< HEAD
     # Sessions themselves will only be synchronized across subdomains if they
     # are all served from the same Drupal installation or if some other session
     # sharing mechanism is implemented.
     #
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
     # @default none
     # cookie_domain: '.example.com'
     #
@@ -51,6 +54,26 @@ parameters:
     # information.
     # @default no value
     cookie_samesite: Lax
+<<<<<<< HEAD
+=======
+    #
+    # Set the session ID string length. The length can be between 22 to 256. The
+    # PHP recommended value is 48. See
+    # https://www.php.net/manual/session.security.ini.php for more information.
+    # This value should be kept in sync with
+    # \Drupal\Core\Session\SessionConfiguration::__construct()
+    # @default 48
+    sid_length: 48
+    #
+    # Set the number of bits in encoded session ID character. The possible
+    # values are '4' (0-9, a-f), '5' (0-9, a-v), and '6' (0-9, a-z, A-Z, "-",
+    # ","). The PHP recommended value is 6. See
+    # https://www.php.net/manual/session.security.ini.php for more information.
+    # This value should be kept in sync with
+    # \Drupal\Core\Session\SessionConfiguration::__construct()
+    # @default 6
+    sid_bits_per_character: 6
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
     # By default, Drupal generates a session cookie name based on the full
     # domain name. Set the name_suffix to a short random string to ensure this
     # session cookie name is unique on different installations on the same
@@ -203,6 +226,7 @@ parameters:
   # Note: By default the configuration is disabled.
   cors.config:
     enabled: false
+<<<<<<< HEAD
     # Specifies allowed headers and sets the Access-Control-Allow-Headers
     # header. For example, ['X-Custom-Header']. See
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers
@@ -243,14 +267,35 @@ parameters:
   # however will also increase requests to the database or entity cache backend.
   entity.memory_cache.slots: 1000
 
+=======
+    # Specify allowed headers, like 'x-allowed-header'.
+    allowedHeaders: []
+    # Specify allowed request methods, specify ['*'] to allow all possible ones.
+    allowedMethods: []
+    # Configure requests allowed from specific origins. Do not include trailing
+    # slashes with URLs.
+    allowedOrigins: ['*']
+    # Configure requests allowed from origins, matching against regex patterns.
+    allowedOriginsPatterns: []
+    # Sets the Access-Control-Expose-Headers header.
+    exposedHeaders: false
+    # Sets the Access-Control-Max-Age header.
+    maxAge: false
+    # Sets the Access-Control-Allow-Credentials header.
+    supportsCredentials: false
+
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
   queue.config:
     # The maximum number of seconds to wait if a queue is temporarily suspended.
     # This is not applicable when a queue is suspended but does not specify
     # how long to wait before attempting to resume.
     suspendMaximumWait: 30
+<<<<<<< HEAD
 
   # Can be argon2i, argon2id or 2y (bcrypt). Setting to NULL (~) will use PASSWORD_DEFAULT.
   # See https://www.php.net/password_hash
   password.algorithm: ~
   # Options passed to password_hash. See https://www.php.net/password_hash
   password.options: [ ]
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
