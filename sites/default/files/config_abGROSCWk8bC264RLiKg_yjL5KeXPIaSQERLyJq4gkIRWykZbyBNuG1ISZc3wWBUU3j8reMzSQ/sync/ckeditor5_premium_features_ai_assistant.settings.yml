@@ -1,0 +1,9 @@
+api_url: ''
+auth_key: ''
+disable_default_styles: false
+ai_provider: openai_service
+openai_service_auth_key: ''
+openai_service_model: ''
+openai_service_parameters: ''
+textAdapter: openAI
+use_custom_endpoint: 0

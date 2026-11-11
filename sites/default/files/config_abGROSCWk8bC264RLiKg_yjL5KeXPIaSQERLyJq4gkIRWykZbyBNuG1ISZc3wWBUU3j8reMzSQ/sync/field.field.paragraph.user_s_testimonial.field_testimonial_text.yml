@@ -1,0 +1,22 @@
+uuid: b5f83d8f-ee6d-4517-b285-b641fa2ec155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testimonial_text
+    - paragraphs.paragraphs_type.user_s_testimonial
+  module:
+    - text
+id: paragraph.user_s_testimonial.field_testimonial_text
+field_name: field_testimonial_text
+entity_type: paragraph
+bundle: user_s_testimonial
+label: 'testimonial text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: 4e986ee8-c398-49bd-9a0d-2cf4649a1add
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nava
+_core:
+  default_config_hash: 211SKPSadXKk1lwHPehoeHE-Z7LesiPbP24b6hlADE4
+id: nava_page_title
+theme: nava
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

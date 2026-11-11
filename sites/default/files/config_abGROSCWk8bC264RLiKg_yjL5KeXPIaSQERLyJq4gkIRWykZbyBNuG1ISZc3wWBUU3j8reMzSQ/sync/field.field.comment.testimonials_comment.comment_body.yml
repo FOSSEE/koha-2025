@@ -1,0 +1,22 @@
+uuid: 0069b973-e06f-49c4-a8ad-fee59a17be93
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.testimonials_comment
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.testimonials_comment.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: testimonials_comment
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

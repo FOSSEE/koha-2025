@@ -1,0 +1,34 @@
+uuid: 2eda5132-2f38-46cc-b27d-dd5f049117b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_carousel_images.body
+    - field.field.node.homepage_carousel_images.field_carousel_image
+    - node.type.homepage_carousel_images
+  module:
+    - image
+    - user
+id: node.homepage_carousel_images.default
+targetEntityType: node
+bundle: homepage_carousel_images
+mode: default
+content:
+  field_carousel_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true

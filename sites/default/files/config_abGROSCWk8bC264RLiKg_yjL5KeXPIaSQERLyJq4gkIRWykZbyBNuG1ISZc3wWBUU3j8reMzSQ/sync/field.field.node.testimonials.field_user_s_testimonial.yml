@@ -1,0 +1,31 @@
+uuid: eb75339b-7849-41d1-bfbb-37e295e63172
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_s_testimonial
+    - node.type.testimonials
+    - paragraphs.paragraphs_type.user_s_testimonial
+  module:
+    - entity_reference_revisions
+id: node.testimonials.field_user_s_testimonial
+field_name: field_user_s_testimonial
+entity_type: node
+bundle: testimonials
+label: "User's Testimonial"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      user_s_testimonial: user_s_testimonial
+    negate: 0
+    target_bundles_drag_drop:
+      user_s_testimonial:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,12 @@
+{
+  "name": "drupal/spambot",
+  "type": "drupal-module",
+  "description": "Anti-spam module that uses data from www.stopforumspam.com to protect the user registration form against known spammers and spambots.",
+  "homepage": "https://www.drupal.org/project/spambot",
+  "support": {
+    "source": "https://git.drupalcode.org/project/spambot"
+  },
+  "require-dev": {
+    "drupal/webform": "6.3.x-dev@dev"
+  }
+}

@@ -67,10 +67,17 @@
  * during the same request.
  *
  * One example of the simplest connection array is shown below. To use the
+<<<<<<< HEAD
+ * sample settings, copy and uncomment the code below and paste it after the
+ * $databases declaration. You will need to replace the database username and
+ * password and possibly the host and port with the appropriate credentials for
+ * your database system.
+=======
  * sample settings, copy and uncomment the code below between the @code and
  * @endcode lines and paste it after the $databases declaration. You will need
  * to replace the database username and password and possibly the host and port
  * with the appropriate credentials for your database system.
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  *
  * The next section describes how to customize the $databases array for more
  * specific needs.
@@ -144,7 +151,11 @@ $databases = [];
  * in deadlocks, the other two options are 'READ UNCOMMITTED' and 'SERIALIZABLE'.
  * They are available but not supported; use them at your own risk. For more
  * info:
+<<<<<<< HEAD
+ * https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html
+=======
  * https://dev.mysql.com/doc/refman/5.7/en/innodb-transaction-isolation-levels.html
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  *
  * On your settings.php, change the isolation level:
  * @code
@@ -312,7 +323,11 @@ $settings['hash_salt'] = '';
 $settings['update_free_access'] = FALSE;
 
 /**
+<<<<<<< HEAD
+ * Fallback to HTTP for Update Status and for fetching security advisories.
+=======
  * Fallback to HTTP for Update Manager and for fetching security advisories.
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  *
  * If your site fails to connect to updates.drupal.org over HTTPS (either when
  * fetching data on available updates, or when fetching the feed of critical
@@ -476,6 +491,8 @@ $settings['update_free_access'] = FALSE;
 # $settings['class_loader_auto_detect'] = FALSE;
 
 /**
+<<<<<<< HEAD
+=======
  * Authorized file system operations:
  *
  * The Update Manager module included with Drupal provides a mechanism for
@@ -500,6 +517,7 @@ $settings['update_free_access'] = FALSE;
 # $settings['allow_authorize_operations'] = FALSE;
 
 /**
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  * Default mode for directories and files written by Drupal.
  *
  * Value should be in PHP Octal Notation, with leading zero.
@@ -517,6 +535,18 @@ $settings['update_free_access'] = FALSE;
 # $settings['file_assets_path'] = 'sites/default/files';
 
 /**
+<<<<<<< HEAD
+ * Asset aggregate garbage collection threshold.
+ *
+ * During cache clears, JavaScript and CSS aggregates older than this threshold
+ * will be deleted. Set this to 0 to immediately delete all files, e.g. during
+ * development.
+ */
+# $settings['aggregate_gc_threshold'] = 86400 * 45;
+
+/**
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  * Public file base URL:
  *
  * An alternative base URL to be used for serving public files. This must
@@ -626,6 +656,21 @@ $settings['update_free_access'] = FALSE;
 # $settings['file_temp_path'] = '/tmp';
 
 /**
+<<<<<<< HEAD
+ * Automatically create an Apache HTTP .htaccess file in writable directories.
+ *
+ * This setting can be disabled if you are not using Apache HTTP server, or if
+ * you have a web server configuration that protects the various writable file
+ * directories.
+ *
+ * @see \Drupal\Component\FileSecurity\FileSecurity::writeHtaccess()
+ * @see https://www.drupal.org/docs/administering-a-drupal-site/security-in-drupal/securing-file-permissions-and-ownership
+ */
+# $settings['auto_create_htaccess'] = FALSE;
+
+/**
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  * Session write interval:
  *
  * Set the minimum interval between each session write to database.
@@ -647,7 +692,11 @@ $settings['update_free_access'] = FALSE;
  */
 # $settings['locale_custom_strings_en'][''] = [
 #   'Home' => 'Front page',
+<<<<<<< HEAD
+#   'Last run @time ago' => 'Last run was done @time ago',
+=======
 #   '@count min' => '@count minutes',
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
 # ];
 
 /**
@@ -711,6 +760,27 @@ $settings['update_free_access'] = FALSE;
 # $config['user.settings']['anonymous'] = 'Visitor';
 
 /**
+<<<<<<< HEAD
+ * Enable HTML5 form validation.
+ *
+ * Drupal 12 will disable HTML5 form validation by default due to issues with
+ * usability and accessibility.  Setting this to TRUE will allow user agents to
+ * continue performing client-side HTML5 validation. This prevents Drupal's
+ * Form API (FAPI) validation from executing, so FAPI validation error messages
+ * may not be displayed including those for required elements.
+ *
+ * Setting this to FALSE will cause HTML5 validation to be disabled on all
+ * forms. Only Drupal's server-side validation will be executed.
+ *
+ * This setting will be removed in Drupal 13.
+ *
+ * @see https://www.drupal.org/node/3537128
+ */
+# $settings['enable_html5_validation'] = TRUE;
+
+/**
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  * Load services definition file.
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
@@ -725,6 +795,8 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 # $settings['container_base_class'] = '\Drupal\Core\DependencyInjection\Container';
 
 /**
+<<<<<<< HEAD
+=======
  * Override the default yaml parser class.
  *
  * Provide a fully qualified class name here if you would like to provide an
@@ -736,6 +808,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 # $settings['yaml_parser_class'] = NULL;
 
 /**
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  * Trusted host configuration.
  *
  * Drupal core can use the Symfony trusted host mechanism to prevent HTTP Host
@@ -810,6 +883,8 @@ $settings['entity_update_batch_size'] = 50;
 $settings['entity_update_backup'] = TRUE;
 
 /**
+<<<<<<< HEAD
+=======
  * State caching.
  *
  * State caching uses the cache collector pattern to cache all requested keys
@@ -820,6 +895,7 @@ $settings['entity_update_backup'] = TRUE;
 $settings['state_cache'] = TRUE;
 
 /**
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  * Node migration type.
  *
  * This is used to force the migration system to use the classic node migrations
@@ -876,6 +952,26 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_private_path'] = '';
 
 /**
+<<<<<<< HEAD
+ * Media oEmbed discovery trusted host configuration.
+ *
+ * The oEmbed spec allows for provider/resource discovery by fetching a URL. The
+ * patterns here restrict which domains Drupal will make a request to for oEmbed
+ * discovery.
+ *
+ * For example:
+ * @code
+ * $settings['media_oembed_discovery_trusted_host_patterns'] = [
+ *   '^www\.example\.com$',
+ * ];
+ * @endcode
+ * will allow the site to make oEmbed discovery requests to www.example.com.
+ */
+# $settings['media_oembed_discovery_trusted_host_patterns'] = [];
+
+/**
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
  * Load local development override configuration, if available.
  *
  * Create a settings.local.php file to override variables on secondary (staging,

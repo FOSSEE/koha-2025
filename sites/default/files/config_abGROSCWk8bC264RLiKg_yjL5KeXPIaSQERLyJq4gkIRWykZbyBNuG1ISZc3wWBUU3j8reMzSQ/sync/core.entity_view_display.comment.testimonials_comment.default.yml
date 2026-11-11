@@ -1,0 +1,27 @@
+uuid: 0703ef30-0066-4b5b-b28a-c9d05dab5c90
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.testimonials_comment
+    - field.field.comment.testimonials_comment.comment_body
+  module:
+    - text
+id: comment.testimonials_comment.default
+targetEntityType: comment
+bundle: testimonials_comment
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

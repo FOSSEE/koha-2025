@@ -1,0 +1,23 @@
+uuid: c32afbef-bbb8-4802-8248-1a93bdfce262
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nava
+id: nava_sitebranding
+theme: nava
+region: header_top
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

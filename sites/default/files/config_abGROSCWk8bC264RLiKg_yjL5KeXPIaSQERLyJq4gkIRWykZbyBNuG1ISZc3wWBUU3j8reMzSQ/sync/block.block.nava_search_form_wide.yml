@@ -1,0 +1,23 @@
+uuid: e9d63a68-4eab-4555-9d69-72062a2622ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - nava
+_core:
+  default_config_hash: wCkX4od57smajYImvNOrhhL7amXjmhHLJ0YsSALN5cY
+id: nava_search_form_wide
+theme: nava
+region: header_search
+weight: -13
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

@@ -1,0 +1,33 @@
+uuid: 42b760bc-ece4-4dd7-a393-a0fb01a4c8d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_s_testimonial.field_date_of_the_testimonial
+    - field.field.paragraph.user_s_testimonial.field_testimonial_text
+    - paragraphs.paragraphs_type.user_s_testimonial
+  module:
+    - datetime
+    - text
+id: paragraph.user_s_testimonial.default
+targetEntityType: paragraph
+bundle: user_s_testimonial
+mode: default
+content:
+  field_date_of_the_testimonial:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_testimonial_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,32 @@
+uuid: fa3d7459-a1b6-4021-8e28-d3c0d4ccac1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homepage_carousel_images.body
+    - field.field.node.homepage_carousel_images.field_carousel_image
+    - node.type.homepage_carousel_images
+  module:
+    - text
+    - user
+id: node.homepage_carousel_images.teaser
+targetEntityType: node
+bundle: homepage_carousel_images
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_carousel_image: true

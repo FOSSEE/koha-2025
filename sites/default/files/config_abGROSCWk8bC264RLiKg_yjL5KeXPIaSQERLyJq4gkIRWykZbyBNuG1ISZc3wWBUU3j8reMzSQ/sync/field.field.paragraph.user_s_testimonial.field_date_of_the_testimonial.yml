@@ -1,0 +1,21 @@
+uuid: d83c861a-4100-4dcd-8dba-16542bd0d3df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_of_the_testimonial
+    - paragraphs.paragraphs_type.user_s_testimonial
+  module:
+    - datetime
+id: paragraph.user_s_testimonial.field_date_of_the_testimonial
+field_name: field_date_of_the_testimonial
+entity_type: paragraph
+bundle: user_s_testimonial
+label: 'date of the testimonial'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

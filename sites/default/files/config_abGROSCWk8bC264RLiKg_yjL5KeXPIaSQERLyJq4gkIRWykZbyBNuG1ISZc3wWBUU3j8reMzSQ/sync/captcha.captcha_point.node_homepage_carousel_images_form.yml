@@ -1,0 +1,7 @@
+uuid: a8ce1d94-a6d2-4869-a9f1-8739de3fe02c
+langcode: en
+status: false
+dependencies: {  }
+formId: node_homepage_carousel_images_form
+captchaType: default
+label: node_homepage_carousel_images_form

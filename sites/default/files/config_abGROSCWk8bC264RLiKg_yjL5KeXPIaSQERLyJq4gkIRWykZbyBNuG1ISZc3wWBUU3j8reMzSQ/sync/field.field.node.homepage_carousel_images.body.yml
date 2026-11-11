@@ -1,0 +1,24 @@
+uuid: e174b210-7fa4-4152-a6f1-7c04f6562bb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.homepage_carousel_images
+  module:
+    - text
+id: node.homepage_carousel_images.body
+field_name: body
+entity_type: node
+bundle: homepage_carousel_images
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

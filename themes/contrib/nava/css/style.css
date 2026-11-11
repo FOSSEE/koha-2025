@@ -18,13 +18,21 @@
   --font-heading: "Sora", sans-serif;
   --font-weight-bold: 500;
 }
+<<<<<<< HEAD
+  .flexslider .slides img {
+=======
 
  .flexslider .slides img {
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
   margin:auto !important;
   width: auto !important;
   display: block;
 } 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
 /* Default Box sizing */
 *,
 *::before,
@@ -953,6 +961,10 @@ td {
   display: flex;
   gap: 1rem;
   align-items: center;
+<<<<<<< HEAD
+  z-index: 1000;
+=======
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
 }
 
 /* Header menu */
@@ -2881,7 +2893,11 @@ hr.line-double {
 /* desktop */
 @media (min-width: 1024px) {
   .site-brand img {
+<<<<<<< HEAD
+    max-height: 60px;
+=======
     max-height: 100px;
+>>>>>>> 986acb26975f05654f4d39f9d0af28d2b76cbfbf
   }
   /* Header main menu */
   .region-primary-menu {

@@ -1,0 +1,187 @@
+uuid: 12fa6aed-89fe-480a-9b52-662431c8b82d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor5
+_core:
+  default_config_hash: lurcn8yf33g3Dkzdc55cTfJa9salGp9ytSYyG1s7QMI
+format: full_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - fontSize
+      - aiCommands
+      - aiAssistant
+      - fontFamily
+      - fontColor
+      - bold
+      - todoList
+      - highlight
+      - italic
+      - insertTableLayout
+      - tableType
+      - fontBackgroundColor
+      - emoji
+      - strikethrough
+      - superscript
+      - subscript
+      - removeFormat
+      - pageBreak
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - fullscreen
+      - '|'
+      - blockQuote
+      - drupalInsertImage
+      - insertTable
+      - horizontalLine
+      - '|'
+      - heading
+      - codeBlock
+      - '|'
+      - sourceEditing
+      - alignment
+      - textPartLanguage
+      - showBlocks
+  plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_language:
+      language_list: un
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_plugin_pack_emoji_emoji:
+      definitionsUrl: ''
+      dropdownLimit: 6
+      skinTone: default
+      useCustomFont: false
+      version: 16
+    ckeditor5_plugin_pack_font__font_color:
+      colors: {  }
+      use_default_colors: true
+      use_colorpicker: true
+      font_color_columns: 5
+      font_color_document_colors: 10
+      bg_color_columns: 5
+      bg_color_document_colors: 10
+    ckeditor5_plugin_pack_font__font_family:
+      options: ''
+    ckeditor5_plugin_pack_font__font_size:
+      options: ''
+    ckeditor5_plugin_pack_highlight__highlight:
+      options: {  }
+      use_default_markers: true
+      attach_styles: false
+    ckeditor5_plugin_pack_layout_table__table_properties:
+      use_default_colors: true
+      use_hex_colors: false
+      default_table_properties:
+        border_style: ''
+        color_picker: hsl
+        use_default_border_color: false
+        border_color: '#000000'
+        border_width: ''
+        use_default_bg_color: false
+        bg_color: '#000000'
+        width: ''
+        height: ''
+        alignment: ''
+      default_table_cell_properties:
+        border_style: ''
+        color_picker: hsl
+        use_default_border_color: false
+        border_color: '#000000'
+        border_width: ''
+        use_default_bg_color: false
+        bg_color: '#000000'
+        width: ''
+        height: ''
+        text_alignment: left
+        padding: ''
+        vertical_alignment: middle
+      colors: {  }
+      disable_properties: false
+    ckeditor5_plugin_pack_paste_markdown__paste_markdown:
+      enabled: true
+    ckeditor5_plugin_pack_todo_document_list__todo_document_list:
+      attach_default_styles: false
+    ckeditor5_premium_features_ai_assistant__ai_assistant:
+      remove_commands:
+        - ''
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: null
+  max_dimensions:
+    width: null
+    height: null

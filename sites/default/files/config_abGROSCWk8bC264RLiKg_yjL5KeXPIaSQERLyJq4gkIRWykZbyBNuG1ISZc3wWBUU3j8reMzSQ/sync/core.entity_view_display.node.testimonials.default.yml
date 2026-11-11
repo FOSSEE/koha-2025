@@ -1,0 +1,42 @@
+uuid: bdcf0fd1-5321-4456-8ccd-0ccbbb649abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.testimonials_comment.default
+    - field.field.node.testimonials.field_comments
+    - field.field.node.testimonials.field_user_s_testimonial
+    - node.type.testimonials
+  module:
+    - comment
+    - entity_reference_revisions
+    - user
+id: node.testimonials.default
+targetEntityType: node
+bundle: testimonials
+mode: default
+content:
+  field_comments:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_user_s_testimonial:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 2789441d-8e6c-4f0e-947a-fcbab92d52c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - nava
+_core:
+  default_config_hash: vgfs5gO-mOD7f1PqipFYcDwqi2XaPgtZJlpeSkLONFA
+id: nava_search_form_narrow
+theme: nava
+region: hidden_blocks
+weight: -14
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

@@ -1,0 +1,11 @@
+name: FlexSlider Library Test
+description: 'Testing with downloaded library'
+core_version_requirement: ^9 || ^10 || ^11
+package: Testing
+type: module
+hidden: true
+
+# Information added by Drupal.org packaging script on 2026-05-04
+version: '3.0.0'
+project: 'flexslider'
+datestamp: 1777925534

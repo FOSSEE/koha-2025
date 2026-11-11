@@ -1,0 +1,20 @@
+uuid: a229f32f-51df-4c91-8071-87dc913424f5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nava
+_core:
+  default_config_hash: wCsDJhKjXP870EIRux3yMmP2Siq6M4z8dk9_5omweaU
+id: nava_primary_admin_actions
+theme: nava
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
