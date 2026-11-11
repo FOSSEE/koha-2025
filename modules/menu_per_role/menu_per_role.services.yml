@@ -1,0 +1,20 @@
+parameters:
+  menu_per_role.skip_procedural_hook_scan: true
+
+services:
+  _defaults:
+    autowire: true
+
+  cache_context.route.is_admin:
+    class: Drupal\menu_per_role\Cache\Context\RouteIsAdminCacheContext
+    tags:
+      - { name: cache.context }
+
+  menu_per_role.menu_tree_manipulators:
+    class: Drupal\menu_per_role\MenuPerRoleLinkTreeManipulator
+    public: false
+    decorates: menu.default_tree_manipulators
+    parent: menu.default_tree_manipulators
+    calls:
+      - [setAdminContext, ['@router.admin_context']]
+      - [setConfigFactory, ['@config.factory']]

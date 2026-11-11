@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of a webform spambot validation handler.
+ *
+ * Available variables:
+ * - settings: The current configuration for this spambot validation handler.
+ * - handler: The email handler.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if settings.debug %}<strong class="color-error">{{ 'Debugging is enabled'|t }}</strong><br />{% endif %}
+<b>Validated Fields</b>
+{% if settings.email_field %}<b>{{ 'Email:'|t }}</b> {{ settings.email_field }}<br />{% endif %}
+{% if settings.username_field %}<b>{{ 'Username:'|t }}</b> {{ settings.username_field }}<br />{% endif %}

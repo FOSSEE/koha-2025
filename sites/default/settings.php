@@ -893,11 +893,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
- 'database' => 'koha-drupal10',
-  'username' => 'drupal',
-  'password' => 'P@ssw0rd',
+ 'database' => getenv('ENV_DB'),
+  'username' => getenv('ENV_USR'),
+  'password' => getenv('ENV_PSWD'),
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => getenv('ENV_HOST'),
   'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',

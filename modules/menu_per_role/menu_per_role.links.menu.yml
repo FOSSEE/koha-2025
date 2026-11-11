@@ -1,0 +1,6 @@
+menu_per_role.settings:
+  title: 'Menu Per Role settings'
+  parent: system.admin_config_system
+  description: 'Configure Menu Per Role settings.'
+  weight: -10
+  route_name: menu_per_role.settings
